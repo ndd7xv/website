@@ -1,0 +1,72 @@
+/* Navbar credits: https://codepen.io/albizan/pen/mMWdWZ */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+:root {
+    --atom-black:    #282c34;
+    --atom-darkgray: #5c6370;
+    --atom-gray:     #818896;
+    --atom-lightgray:#abb2bf;
+    --atom-marine:   #56b6c2;
+    --atom-blue:     #61aeee;
+    --atom-purple:   #c678dd;
+    --atom-green:    #98c379;
+    --atom-red:      #e06c75;
+    --atom-darkred:  #be5046;
+    --atom-brown:    #d19a66;
+    --atom-orange:   #e6c07b;
+    --white:         #ffffff;
+}
+
+div.intro {
+    display: inline-grid;
+    grid-template-columns: 50% 50%;
+    width:100vw;
+    padding:10px;
+    animation-name: slide;
+    animation-duration: 2s;
+}
+
+div.intro * {
+    vertical-align: center;
+    margin: auto;
+    padding:10px;
+}
+
+div.intro *.text {
+    font-size: 25px;
+    width:675px;
+    position: relative;
+}
+
+div.intro img.me {
+    height: 800px;
+    width: auto;
+    border-radius: 15px;
+}
+@keyframes slide {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+@media screen and (max-width: 1275px) {
+    div.intro {
+        display: inline-grid;
+        grid-template-columns: 100%;
+        grid-template-rows: 50% 50%;
+        width:100vw;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+    .intro img.me {
+        height:450px;
+        width: auto;
+    }
+	div.intro *.text {
+        width: 420px;
+    }
+}

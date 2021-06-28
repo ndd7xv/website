@@ -1,0 +1,115 @@
+/* Navbar credits: https://codepen.io/albizan/pen/mMWdWZ */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,500,700');
+
+:root {
+    --atom-black:    #282c34;
+    --atom-darkgray: #5c6370;
+    --atom-gray:     #818896;
+    --atom-lightgray:#abb2bf;
+    --atom-marine:   #56b6c2;
+    --atom-blue:     #61aeee;
+    --atom-purple:   #c678dd;
+    --atom-green:    #98c379;
+    --atom-red:      #e06c75;
+    --atom-darkred:  #be5046;
+    --atom-brown:    #d19a66;
+    --atom-orange:   #e6c07b;
+    --white:         #ffffff;
+}
+
+div.form-container {
+	font-size: 20px;
+}
+
+span.fade {
+    animation-name: fade;
+    animation-duration: 2s;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+div.form-container form {
+	border-radius: 15px;
+	width:1200px;
+	height:550px;
+	background-color: #424852;
+	margin: auto;
+	padding-left:50px;
+	padding-right:50px;
+	padding-top:25px;
+	padding-bottom:25px;
+}
+
+div.form-container * {
+	background-color: var(--atom-black);
+	color: var(--atom-gray);
+	padding-top: 10px;
+	padding-bottom:10px;
+	border:none;
+	border-radius: 15px;
+}
+
+div.form-container form textarea {
+	box-sizing: border-box;
+	width: 100%;
+	resize: none;
+	float:none;
+	height:250px;
+	padding:15px;
+	font-size: 18px;
+}
+
+div.form-container form input[type=text] {
+	box-sizing: border-box;
+	padding:15px;
+	width: 100%;
+	font-size: 18px;
+}
+
+div.form-container form input[type=submit] {
+	cursor: pointer;
+	width: 100px;
+	float: right;
+	font-size: 20px;
+}
+
+div.form-container form label {
+	border-radius: 0px;
+	padding: 0px;
+	background-color: #424852;
+}
+
+input:focus {
+	outline: none;
+	border: 1px solid var(--atom-marine);
+	box-shadow: 0px 0px 3px var(--atom-marine);
+}
+
+textarea:focus {
+	outline: none;
+	border: 1px solid var(--atom-marine);
+	box-shadow: 0px 0px 3px var(--atom-marine);
+}
+
+@media screen and (max-width:1300px) {
+	div.form-container form {
+		width: 675px;
+	}
+}
+
+@media screen and (max-width:768px) {
+	div.form-container form {
+		width: 250px;
+	}
+	div.form-container form input[type=submit] {
+		cursor: pointer;
+		width: 100%;
+	}
+}

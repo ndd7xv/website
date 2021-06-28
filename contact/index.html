@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+	<head>
+		<title>Nathan Do - About</title>
+		<meta charset="utf-8">
+
+		<link rel="stylesheet" href="/css/navbar.css">
+		<link rel="stylesheet" href="/css/contact.css">
+		<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+		<script src="/js/scripts.js"></script>
+	</head>
+
+	<div id="nav-placeholder"> 	
+		<script> loadNavBar() </script>
+	</div>
+
+	<body style="background-color: var(--atom-black);">
+		<!-- To offset the size of the navbar (65px) -->
+		<div style="height: 85px;"> </div>
+		<span class="fade">
+			<div style="text-align: center;font-size: 25px; margin: 0 auto">
+				<h3 style="margin-bottom:-6px">Contact Me!</h3>
+				<p>My <a href="https://github.com/ndd7xv">Github</a> and <a href="https://www.linkedin.com/in/nathan-do/">LinkedIn</a> accounts are also on my main page, though you can send me a message about whatever you want here!</p>
+			</div>
+			<br>
+			<div class="form-container" style="position:relative;">
+				<form action="#">
+					<label for="name">Name:</label>
+					<input type="text" id="nameID" name="name"><br><br>
+					<label for="lname">Email:</label><br>
+					<input type="text" id="emailID" name="email"><br><br>
+					<label for="message">Message:</label><br>
+					<textarea id="messageID" name="message"></textarea><br><br>
+					<input type="submit" value="Submit" onclick="sendMessage()">
+				</form> 
+			</div>
+		</span>
+	</body>

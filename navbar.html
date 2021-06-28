@@ -1,0 +1,31 @@
+<nav class="nav">
+	<div class="container">
+		<div class="logo">
+			<a href="/index.html">Nathan Do</a>
+		</div>
+		<div id="mainListDiv" class="main_list">
+			<ul class="navlinks">
+				<li><a href="/work/index.html">Work</a></li>
+				<li><a href="/blog/index.html">Blog</a></li>
+				<li><a href="/contact/index.html">Contact</a></li>
+			</ul>
+		</div>
+		<span class="navTrigger">
+			<i></i>
+			<i></i>
+			<i></i>
+		</span>
+		<script>
+			$('.navTrigger').click(function () {
+				$(this).toggleClass('active');
+				$("#mainListDiv").toggleClass("show_list");
+				if ($('.nav').hasClass('show_list')) {
+					$('.nav').removeClass('affix');
+				} else {
+					$('.nav').addClass('affix');
+				}
+				$("#mainListDiv").fadeIn();
+			});
+		</script>
+	</div>
+</nav>
