@@ -1,0 +1,29 @@
+:root {
+    --atom-black:    #282c34;
+    --atom-darkgray: #5c6370;
+    --atom-gray:     #818896;
+    --atom-lightgray:#abb2bf;
+    --atom-marine:   #56b6c2;
+    --atom-blue:     #61aeee;
+    --atom-purple:   #c678dd;
+    --atom-green:    #98c379;
+    --atom-red:      #e06c75;
+    --atom-darkred:  #be5046;
+    --atom-brown:    #d19a66;
+    --atom-orange:   #e6c07b;
+    --white:         #ffffff;
+}
+
+div.fade {
+    animation-name: fade_anim;
+    animation-duration: 2s;
+}
+
+@keyframes fade_anim {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

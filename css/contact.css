@@ -21,12 +21,12 @@ div.form-container {
 	font-size: 20px;
 }
 
-span.fade {
-    animation-name: fade;
+div.fade {
+    animation-name: fade_anim;
     animation-duration: 2s;
 }
 
-@keyframes fade {
+@keyframes fade_anim {
     from {
         opacity: 0;
     }
@@ -102,11 +102,19 @@ textarea:focus {
 	div.form-container form {
 		width: 475px;
 	}
+	div.form-container form {
+		padding-left: 35px;
+		padding-right: 35px;
+	}
 }
 
-@media screen and (max-width:475px) {
+@media screen and (max-width:625px) {
 	div.form-container form {
 		width: 250px;
+	}
+	div.form-container form {
+		padding-left: 20px;
+		padding-right: 20px;
 	}
 	div.form-container form input[type=submit] {
 		cursor: pointer;

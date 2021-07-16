@@ -3,17 +3,28 @@ function sendMessage() {
     var email = document.getElementById("emailID").value;
     var message = document.getElementById("messageID").value;
 
-    console.log(name);
-    console.log(email);
-    console.log(message);
-
-    console.log("Check to see if fields are filled correctly, then send message.");
-
-    alert("Your message was sent!");
+    if (name.isEmpty() || email.isEmpty() || message.isEmpty()) {
+        alert("There's a missing field!");
+    } else if (isInvalidEmail(email)) {
+        alert("Your email is invalid!");
+    } else {
+        console.log("send message");
+        alert("Your message was sent!");
+    }
     /*
     'https://maker.ifttt.com/trigger/WebsiteMessageSubmit/with/key/dYcZmnn4JQzALBO6_hpQvd?value1='+ NAME from EMAIL +'&value2=' + MESSAGE
     */
 }
+
+String.prototype.isEmpty = function() {
+    return (this.length === 0 || !this.trim());
+}
+
+function isInvalidEmail(emailAdress) {
+  let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+  if (emailAdress.match(regexEmail)) { return false; } else { return true; }
+}
+
 /* Navigation bar scripts */
 function loadNavBar() {
     $("#nav-placeholder").load("navbar.html");
